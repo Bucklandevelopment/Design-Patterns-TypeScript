@@ -1,5 +1,19 @@
 import config from "./config.json";
 
+/**
+ * Clase que exporta un singleton de la configuracion
+ * como se explica en el video la instancia y los parametros
+ * son privados y estaticos
+ * 
+ * Con esto conseguimos blindarlos de tal manera que no se puedan
+ * modificar una vez inicializada la instancia de la clase,
+ * la cual ocurren en metodo initialize.
+ * 
+ * Debido a que el contructor es privado, solo podemos acceder
+ * a la instancia de la clase haciendo uso del metodo estático
+ * público getInstance, al igual que al resto de parametros.
+ */
+
 export default class MyConfiguration {
     private static instance: MyConfiguration;
 
